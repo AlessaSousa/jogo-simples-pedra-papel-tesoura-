@@ -14,8 +14,9 @@ def jogar(jogador):
          (jogador == 'tesoura' and computador == 'papel'):
          resultado = "Você venceu"  
     else:
-        resultado = "O computador venceu"   
-        
+         resultado = "O computador venceu"   
+    
+    escolhaComp.config(text=computador)
     textoResult.config(text=resultado)
     
 janela = Tk()
@@ -39,7 +40,14 @@ botao3 = Button(janela, text = "tesoura", command = lambda: jogar("tesoura"))
 botao3.config(bg='white', font=('Arial',14))
 botao3.grid(column = 0, row = 3, padx = 10, pady = 10)
 
+printar = Label(janela, text="O Computador escolheu: ", bg='lightgray', font=('Arial', 14, 'italic'))
+printar.grid(column=0, row=4, padx=10, pady=10)
+
+escolhaComp = Label(janela, text="", bg='lightgray', font=('Arial', 14, 'italic'))
+escolhaComp.grid(column=1, row= 4, padx=10, pady=10)
+
 textoResult = Label(janela, text="", bg='lightgray', font=('Arial', 14, 'italic'))
-textoResult.grid(column = 0, row = 4, padx=10, pady=10)
+textoResult.grid(column = 0, row = 6, padx=10, pady=10)
 
 janela.mainloop()
+
