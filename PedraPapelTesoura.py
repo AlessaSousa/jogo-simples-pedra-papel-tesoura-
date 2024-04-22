@@ -12,7 +12,7 @@ def jogar(jogador):
     elif (jogador == 'pedra' and computador == 'tesoura') or \
          (jogador == 'papel' and computador == 'pedra') or \
          (jogador == 'tesoura' and computador == 'papel'):
-         resultado = "Você venceu"  
+         resultado = "Você venceu" 
     else:
          resultado = "O computador venceu"   
     
